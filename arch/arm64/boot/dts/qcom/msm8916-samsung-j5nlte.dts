@@ -53,6 +53,7 @@
 		usb@78d9000 {
 			status = "okay";
 			dr_mode = "peripheral";
+			extcon = <&usb_vbus>;
 
 			hnp-disable;
 			srp-disable;
@@ -60,6 +61,7 @@
 
 			ulpi {
 				phy {
+					extcon = <&usb_vbus>;
 					v1p8-supply = <&pm8916_l7>;
 					v3p3-supply = <&pm8916_l13>;
 				};
