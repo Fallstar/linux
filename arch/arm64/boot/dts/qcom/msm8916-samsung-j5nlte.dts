@@ -89,9 +89,15 @@
 		etm@85e000 { status = "disabled"; };
 		etm@85f000 { status = "disabled"; };
 	};
+
+	usb_vbus: usb-vbus {
+		  compatible = "linux,extcon-usb-gpio";
+		  vbus-gpio = <&msmgpio 105 GPIO_ACTIVE_HIGH>;
+	};
 };
 
-// TODO (wiki): Explain setup of dummy extcon device to make USB work
+
+
 
 // FIXME: Verify all regulators with downstream
 &smd_rpm_regulators {
